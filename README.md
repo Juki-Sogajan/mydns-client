@@ -15,3 +15,7 @@ crontabなどと併用することで、MyDNSの通知を自動化できます�
 * LOG_DIR: ログファイルを保存するディレクトリへのパス
 * ID: MyDNSのID
 * PASSWORD: MyDNSのパスワード
+
+## LICENSE
+このリポジトリは _Unlicense_ ライセンスの下で公開されています。
+詳しくは、**LICENSE.txt** を参照してください。

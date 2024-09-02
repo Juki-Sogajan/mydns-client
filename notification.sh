@@ -1,17 +1,18 @@
 #!/bin/sh
 # MyDNS通知用スクリプト
 
+#
+# 設定ファイル読み込み
+#
 
-# 設定用変数
+CONFIG_FILE="./notification.profile"
 
-WORKING_DIR="."
+if -r "$1"; then
+    echo "A configuration file was specified. The default configuration file is "$CONFIG_FILE"."
+    CONFIG_FILE="$1"
+fi
 
-URL_IPV4=https://ipv4.mydns.jp/login.html
-URL_IPV6=https://ipv6.mydns.jp/login.html
-
-ID=""
-PASSWORD=""
-
+source $CONFIG_FILE
 
 # メイン処理
 

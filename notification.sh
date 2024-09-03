@@ -7,9 +7,16 @@
 
 CONFIG_FILE="./notification.profile"
 
-if -r "$1"; then
-    echo "A configuration file was specified. The default configuration file is "$CONFIG_FILE"."
+if [ -f "$1" ]; then
     CONFIG_FILE="$1"
+    echo "A configuration file was specified."
+fi
+
+if [ -r "$CONFIG_FILE" ]; then
+    echo "The configuration file is "$CONFIG_FILE"."
+else
+    echo "A configuration file was not found."
+    exit 1
 fi
 
 source $CONFIG_FILE
